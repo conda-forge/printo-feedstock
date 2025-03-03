@@ -1,5 +1,5 @@
 {% set name = "printo" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/printo-{{ version }}.tar.gz
-  sha256: dbaa68a84e814c5c5279b588f07dae51182e2f7e7c9c154aa98a688f0cbf78a9
+  sha256: 26d64101b5ab67384e7fbc106a9f7b4a7879529b5a0c4cb7f7aa97e9fff38bab
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
