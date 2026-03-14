@@ -24,7 +24,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - sigmatch >=0.0.7
+    - sigmatch >=0.0.8
+    - getsources >=0.0.3
 
 tests:
   - python:
