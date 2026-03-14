@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: printo
-  version: "0.0.14"
+  version: "0.0.16"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/printo-${{ version }}.tar.gz
-  sha256: d348ad077d73ef559cf56349788cdc891a69beaeb0e9e47322c1e3704f88bb3f
+  sha256: e89d1ad629745adfd215f3adcdcb565b26c39a5a1b00d6d7ca595a4c7abdb3b3
 
 build:
   number: 0
@@ -24,7 +24,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - sigmatch >=0.0.7
+    - sigmatch >=0.0.8
+    - getsources >=0.0.3
 
 tests:
   - python:
