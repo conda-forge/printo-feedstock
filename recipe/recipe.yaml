@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: printo
-  version: "0.0.16"
+  version: "0.0.22"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/printo-${{ version }}.tar.gz
-  sha256: e89d1ad629745adfd215f3adcdcb565b26c39a5a1b00d6d7ca595a4c7abdb3b3
+  sha256: c1705161e9d7106a0c1f97600dd6a9d88b5361b915482549554ee27d99e28c21
 
 build:
   number: 0
