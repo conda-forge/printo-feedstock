@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: printo
-  version: "0.0.16"
+  version: "0.0.17"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/printo-${{ version }}.tar.gz
-  sha256: e89d1ad629745adfd215f3adcdcb565b26c39a5a1b00d6d7ca595a4c7abdb3b3
+  sha256: 87b5a2ce79cacb669c4e5f28c7cb5c54f1f8866a4fdde742d6db258f426d920a
 
 build:
   number: 0
@@ -32,7 +32,9 @@ tests:
       imports:
         - printo
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Print objects with data beautifully
